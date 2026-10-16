@@ -16,3 +16,8 @@ jobs:
         run: npm test
       - name: Build the application
         run: npm run build
+      - name: upload the build from runner to the github repo
+        uses: actions/upload-artifact@v7
+        with:
+         name: buildfile
+         path: dist
